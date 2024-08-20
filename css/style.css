@@ -1,0 +1,352 @@
+/* Estilos generales del body */
+body {
+    background-color: #ffffff; /* Fondo blanco para la página completa */
+    color: #070707; /* Texto para contraste con el fondo */
+    font-family: 'Roboto', sans-serif; /* Asegura que la fuente se aplique */
+    margin: 0; /* Elimina el margen por defecto del body */
+    padding: 0;
+}
+
+/* Estilos para el contenedor de la imagen de fondo y el contenido */
+.content-wrapper {
+    position: relative; /* Permite que el contenido se posicione sobre este contenedor */
+    padding-bottom: 20px; /* Asegura que haya espacio para el footer */
+}
+
+/* Estilos para la imagen de fondo */
+.background-image {
+    position: absolute; /* Posiciona la imagen en relación con el contenedor */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+}
+
+/* Estilos para el main y las secciones */
+main {
+    position: relative; /* Asegura que main se posicione dentro de content-wrapper */
+    background-color: rgba(228, 11, 11, 0); /* Blanco con 80% de opacidad */
+    color: #b69d9d; /* Texto dentro del main */
+    padding: 20px;
+}
+
+/* Estilos para la sección hero */
+.hero {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido */
+    padding: 20px;
+    position: relative; /* Permite que el contenido se posicione sobre la imagen de fondo */
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente */
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px; /* Ajusta el ancho máximo si es necesario */
+    margin: 0 auto;
+    position: relative; /* Asegura que el contenido esté sobre la imagen de fondo */
+}
+
+.hero-img {
+    width: 40%; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    border: 5px solid #000; /* Borde negro */
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+.hero-text {
+    width: 60%; /* Ajusta el ancho del texto según sea necesario */
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #000000; /* Color del texto */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 3px solid #000; /* Borde negro alrededor del h2 */
+    border-radius: 8px; /* Bordes redondeados del borde */
+    background-color: #979793; /* Color de fondo beige */
+    display: inline-block; /* Asegura que el borde se ajuste al contenido */
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+/* Estilos para el header y la navbar */
+header {
+    margin-bottom: 20px; /* Espacio entre el header y el contenido principal */
+}
+
+/* Estilos para la navbar */
+.navbar {
+    padding: 1rem;
+    background-image: url('../img/banner-taco.png'); /* Imagen de fondo para el nav */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el área del nav */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    box-shadow: none; /* Elimina la sombra si es necesario */
+}
+
+.navbar-brand {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    text-align: center; /* Centra el texto */
+}
+
+.logo-img {
+    width: 100px; /* Ajusta el tamaño del logo si es necesario */
+    height: auto;
+    margin-bottom: 5px; /* Añade espacio entre el logo y el texto */
+}
+
+.brand-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000; /* Color para el texto de la marca */
+    margin-top: 5px; /* Añade espacio encima del texto para separarlo del logo */
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #636262; /* Fondo oscuro para el footer */
+    color: #f8f9fa; /* Texto claro para contraste */
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Asegura que el footer esté posicionado correctamente dentro del contenedor */
+    z-index: 1; /* Asegura que el footer esté por encima de la imagen de fondo */
+}
+
+footer a {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffc107;
+}
+
+.btn-ir-arriba {
+    margin-top: 1%;
+    margin-bottom: 20px;
+}
+
+.redes a {
+    margin: 0 10px;
+}
+
+.redes img {
+    max-width: 30px;
+}
+
+/* Responsividad */
+@media (max-width: 991px) {
+    .navbar-brand {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-img {
+        max-height: 100px;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilos para el menú desplegable en móvil */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: rgba(205, 196, 196, 0.8); /* Fondo semi-transparente para el menú desplegable en móvil */
+        border-radius: 8px; /* Bordes redondeados del fondo */
+    }
+
+    .navbar-nav .nav-link {
+        color: #e50c0c; /* Color rojo para los enlaces en el menú desplegable en móvil */
+        font-weight: bold;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #f60303; /* Color rojo más intenso al pasar el ratón */
+        text-decoration: underline; /* Subraya el enlace al pasar el ratón */
+    }
+}
+
+/* Estilos para el menú desplegable en navegador (pantallas grandes) */
+@media (min-width: 992px) {
+    .navbar-collapse {
+        background-color: transparent; /* Fondo transparente para el menú desplegable en navegadores */
+        border-radius: 0; /* Bordes sin redondear para el menú desplegable en navegadores */
+    }
+}
+
+/* Estilos para la sección hero */
+.hero {
+    display: flex;
+    align-items: flex-start; /* Alinea las imágenes y el texto en la parte superior */
+    padding: 20px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente */
+}
+
+.hero-content {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos para el contenedor del slider */
+.image-slider {
+    position: relative;
+    width: 300px; /* Ajusta el tamaño del slider según sea necesario */
+    height: 300px; /* Asegúrate de que la altura sea igual al ancho para mantener el formato cuadrado */
+    overflow: hidden;
+    border: 5px solid #000; /* Borde negro */
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+/* Estilos para cada imagen del slider */
+.slider-img {
+    position: absolute;
+    width: 100%;
+    height: 100%; /* Asegúrate de que cada imagen ocupe todo el espacio del contenedor */
+    top: 0;
+    left: 0;
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin deformarla */
+    opacity: 0; /* Inicialmente oculta todas las imágenes */
+    transition: opacity 1s ease-in-out; /* Transición suave para el cambio de opacidad */
+}
+
+/* Mostrar la primera imagen */
+.slider-img:nth-child(1) {
+    opacity: 1;
+    animation: slide 15s infinite; /* Animación para rotar las imágenes */
+}
+
+/* Mostrar la segunda imagen después de 5 segundos */
+.slider-img:nth-child(2) {
+    animation: slide 15s infinite 5s; /* Retraso de 5 segundos */
+}
+
+/* Mostrar la tercera imagen después de 10 segundos */
+.slider-img:nth-child(3) {
+    animation: slide 15s infinite 10s; /* Retraso de 10 segundos */
+}
+
+/* Animación para las imágenes rotatorias */
+@keyframes slide {
+    0% { opacity: 0; }
+    33.33% { opacity: 1; }
+    66.66% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+
+
+.hero-text {
+    width: 60%;
+    padding-left: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 3px solid #000;
+    border-radius: 8px;
+    background-color: #979793;
+    display: inline-block;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+ /* Estilos personalizados para la página de donaciones */
+ .donaciones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero-content > * {
+    margin-bottom: 20px;
+}
+
+.donation-info, .contact-info {
+    width: 100%;
+    text-align: center;
+}
+
+.donation-form {
+    width: 100%;
+    text-align: left;
+}
+
+#map {
+    border: 4px solid black; /* Borde negro alrededor del contenedor del mapa */
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que el mapa no se salga de los bordes redondeados */
+    box-sizing: border-box;
+    width: 300px; /* Ancho por defecto */
+    height: 400px; /* Altura por defecto */
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+}
+
+#map iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Quitar cualquier borde predeterminado del iframe */
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    #map {
+        position: relative; /* Cambia la posición del mapa */
+        width: 100%; /* El mapa ocupa el 100% del ancho del contenedor */
+        height: 250px; /* Ajusta la altura para pantallas pequeñas */
+        margin: 20px 0; /* Espaciado superior e inferior */
+        right: auto;
+        top: auto;
+        transform: none;
+    }
+
+    .donaciones-container {
+        padding-bottom: 0; /* Ajusta el padding en dispositivos pequeños */
+    }
+}
+
+
+
