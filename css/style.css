@@ -2,7 +2,7 @@
 body {
     background-color: #ffffff; /* Fondo blanco para la página completa */
     color: #070707; /* Texto para contraste con el fondo */
-    font-family: 'Roboto', sans-serif; /* Asegura que la fuente se aplique */
+    font-family: "Matemasie", sans-serif;
     margin: 0; /* Elimina el margen por defecto del body */
     padding: 0;
 }
@@ -80,7 +80,7 @@ main {
 
 /* Estilos para el header y la navbar */
 header {
-    margin-bottom: 20px; /* Espacio entre el header y el contenido principal */
+    margin-bottom: 0%; /* Espacio entre el header y el contenido principal */
 }
 
 /* Estilos para la navbar */
@@ -95,23 +95,27 @@ header {
 
 .navbar-brand {
     display: flex;
-    flex-direction: column; /* Organiza los elementos verticalmente */
+    flex-direction: column; /* Alinea los elementos verticalmente */
     align-items: center; /* Centra los elementos horizontalmente */
     text-align: center; /* Centra el texto */
+    padding: 10px 0; /* Añade un poco de espacio alrededor */
 }
 
 .logo-img {
-    width: 100px; /* Ajusta el tamaño del logo si es necesario */
-    height: auto;
-    margin-bottom: 5px; /* Añade espacio entre el logo y el texto */
+    width: 100px; /* Tamaño pequeño para el logo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 0px; /* Reduce el espacio debajo del logo */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
 }
 
 .brand-text {
-    font-size: 18px;
+    margin-top: 0; /* Elimina cualquier margen superior adicional */
+    font-size: 18px; /* Ajusta el tamaño de la fuente si es necesario */
     font-weight: bold;
-    color: #000000; /* Color para el texto de la marca */
-    margin-top: 5px; /* Añade espacio encima del texto para separarlo del logo */
+    color: #000000;
+    text-align: center; /* Centra el texto debajo del logo */
 }
+
 
 /* Estilos para el footer */
 footer {
